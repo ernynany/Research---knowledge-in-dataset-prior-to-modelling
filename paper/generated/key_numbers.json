@@ -1,0 +1,1096 @@
+{
+ "calib_n_ok_perm": 10,
+ "calib_n_ok_mc": 11,
+ "calib_perm_min": 0.0,
+ "calib_perm_max": 0.1,
+ "calib_mc_min": 0.02727272727272727,
+ "calib_mc_max": 0.06818181818181818,
+ "A2_uncorrected_p10": 0.3958333333333333,
+ "A2_uncorrected_p50": 0.9241666666666667,
+ "A2_uncorrected_p200": 1.0,
+ "A2_simes_max": 0.09,
+ "power_overall": {
+  "S1_MI": 0.185,
+  "S2_ANOVA_Chi2": 0.27,
+  "S3_dCor": 0.43,
+  "S4_HSIC": 0.437,
+  "G1_F1": 0.263,
+  "G2_N1": 0.323,
+  "G3_N3": 0.358,
+  "M1_Tree": 0.423,
+  "M2_LogReg": 0.268,
+  "M3_Forest": 0.549,
+  "M4_HGB": 0.578
+ },
+ "power_by_type": {
+  "interaction": {
+   "S1_MI": 0.027,
+   "S2_ANOVA_Chi2": 0.037,
+   "S3_dCor": 0.16,
+   "S4_HSIC": 0.171,
+   "G1_F1": 0.028,
+   "G2_N1": 0.322,
+   "G3_N3": 0.319,
+   "M1_Tree": 0.166,
+   "M2_LogReg": 0.036,
+   "M3_Forest": 0.364,
+   "M4_HGB": 0.488
+  },
+  "linear": {
+   "S1_MI": 0.26,
+   "S2_ANOVA_Chi2": 0.742,
+   "S3_dCor": 0.778,
+   "S4_HSIC": 0.781,
+   "G1_F1": 0.736,
+   "G2_N1": 0.423,
+   "G3_N3": 0.437,
+   "M1_Tree": 0.581,
+   "M2_LogReg": 0.738,
+   "M3_Forest": 0.667,
+   "M4_HGB": 0.666
+  },
+  "nonlinear": {
+   "S1_MI": 0.269,
+   "S2_ANOVA_Chi2": 0.03,
+   "S3_dCor": 0.351,
+   "S4_HSIC": 0.358,
+   "G1_F1": 0.027,
+   "G2_N1": 0.222,
+   "G3_N3": 0.319,
+   "M1_Tree": 0.523,
+   "M2_LogReg": 0.031,
+   "M3_Forest": 0.616,
+   "M4_HGB": 0.581
+  }
+ },
+ "power_small_n": {
+  "G1_F1": 0.213,
+  "G2_N1": 0.073,
+  "G3_N3": 0.093,
+  "M1_Tree": 0.177,
+  "M2_LogReg": 0.173,
+  "M3_Forest": 0.247,
+  "M4_HGB": 0.29,
+  "S1_MI": 0.08,
+  "S2_ANOVA_Chi2": 0.2,
+  "S3_dCor": 0.187,
+  "S4_HSIC": 0.187
+ },
+ "friedman_chi2": 65.31063696266096,
+ "friedman_p": 3.53481831326412e-10,
+ "best_probe": "M4_HGB",
+ "mean_ranks": {
+  "M4_HGB": 3.92,
+  "M3_Forest": 4.54,
+  "M1_Tree": 5.1,
+  "S4_HSIC": 5.22,
+  "S3_dCor": 5.32,
+  "G3_N3": 6.25,
+  "S2_ANOVA_Chi2": 6.61,
+  "G1_F1": 6.85,
+  "G2_N1": 6.97,
+  "M2_LogReg": 7.15,
+  "S1_MI": 8.07
+ },
+ "interaction_power_mean": {
+  "S1_MI": 0.027,
+  "S2_ANOVA_Chi2": 0.037,
+  "S3_dCor": 0.16,
+  "S4_HSIC": 0.171,
+  "G1_F1": 0.028,
+  "G2_N1": 0.322,
+  "G3_N3": 0.319,
+  "M1_Tree": 0.166,
+  "M2_LogReg": 0.036,
+  "M3_Forest": 0.364,
+  "M4_HGB": 0.488
+ },
+ "interaction_power_max": {
+  "S1_MI": 0.12,
+  "S2_ANOVA_Chi2": 0.08,
+  "S3_dCor": 1.0,
+  "S4_HSIC": 1.0,
+  "G1_F1": 0.08,
+  "G2_N1": 1.0,
+  "G3_N3": 1.0,
+  "M1_Tree": 0.467,
+  "M2_LogReg": 0.133,
+  "M3_Forest": 1.0,
+  "M4_HGB": 1.0
+ },
+ "H2b_drop_distance": 0.7366666666666668,
+ "H2b_drop_model": 0.29000000000000004,
+ "robust_table": {
+  "bal_0": {
+   "S1_MI": 0.347,
+   "S2_ANOVA_Chi2": 0.36,
+   "S3_dCor": 0.987,
+   "S4_HSIC": 1.0,
+   "G1_F1": 0.387,
+   "G2_N1": 0.987,
+   "G3_N3": 0.88,
+   "M1_Tree": 0.84,
+   "M2_LogReg": 0.4,
+   "M3_Forest": 1.0,
+   "M4_HGB": 1.0
+  },
+  "bal_20": {
+   "S1_MI": 0.08,
+   "S2_ANOVA_Chi2": 0.36,
+   "S3_dCor": 0.493,
+   "S4_HSIC": 0.52,
+   "G1_F1": 0.333,
+   "G2_N1": 0.547,
+   "G3_N3": 0.453,
+   "M1_Tree": 0.653,
+   "M2_LogReg": 0.373,
+   "M3_Forest": 0.773,
+   "M4_HGB": 0.933
+  },
+  "bal_200": {
+   "S1_MI": 0.04,
+   "S2_ANOVA_Chi2": 0.347,
+   "S3_dCor": 0.347,
+   "S4_HSIC": 0.347,
+   "G1_F1": 0.347,
+   "G2_N1": 0.133,
+   "G3_N3": 0.08,
+   "M1_Tree": 0.48,
+   "M2_LogReg": 0.347,
+   "M3_Forest": 0.6,
+   "M4_HGB": 0.653
+  },
+  "imb_0": {
+   "S1_MI": 0.333,
+   "S2_ANOVA_Chi2": 0.44,
+   "S3_dCor": 0.773,
+   "S4_HSIC": 0.787,
+   "G1_F1": 0.44,
+   "G2_N1": 0.227,
+   "G3_N3": 0.28,
+   "M1_Tree": 0.413,
+   "M2_LogReg": 0.387,
+   "M3_Forest": 0.933,
+   "M4_HGB": 0.76
+  },
+  "imb_20": {
+   "S1_MI": 0.093,
+   "S2_ANOVA_Chi2": 0.373,
+   "S3_dCor": 0.467,
+   "S4_HSIC": 0.493,
+   "G1_F1": 0.36,
+   "G2_N1": 0.08,
+   "G3_N3": 0.093,
+   "M1_Tree": 0.533,
+   "M2_LogReg": 0.347,
+   "M3_Forest": 0.747,
+   "M4_HGB": 0.587
+  },
+  "imb_200": {
+   "S1_MI": 0.067,
+   "S2_ANOVA_Chi2": 0.293,
+   "S3_dCor": 0.373,
+   "S4_HSIC": 0.24,
+   "G1_F1": 0.253,
+   "G2_N1": 0.067,
+   "G3_N3": 0.04,
+   "M1_Tree": 0.413,
+   "M2_LogReg": 0.227,
+   "M3_Forest": 0.44,
+   "M4_HGB": 0.253
+  },
+  "drop_0_to_200_bal": {
+   "S1_MI": 0.307,
+   "S2_ANOVA_Chi2": 0.013,
+   "S3_dCor": 0.64,
+   "S4_HSIC": 0.653,
+   "G1_F1": 0.04,
+   "G2_N1": 0.853,
+   "G3_N3": 0.8,
+   "M1_Tree": 0.36,
+   "M2_LogReg": 0.053,
+   "M3_Forest": 0.4,
+   "M4_HGB": 0.347
+  }
+ },
+ "fpr_imbalanced_max": 0.058333333333333334,
+ "runtime_seconds": {
+  "1000": {
+   "S1_MI": 0.05,
+   "S2_ANOVA_Chi2": 0.0651,
+   "S3_dCor": 0.0711,
+   "S4_HSIC": 0.0854,
+   "G1_F1": 0.0017,
+   "G2_N1": 0.248,
+   "G3_N3": 0.0248,
+   "M1_Tree": 0.0254,
+   "M2_LogReg": 0.102,
+   "M3_Forest": 0.5131,
+   "M4_HGB": 2.6265
+  },
+  "5000": {
+   "S1_MI": 0.1386,
+   "S2_ANOVA_Chi2": 0.0737,
+   "S3_dCor": 1.8389,
+   "S4_HSIC": 1.7363,
+   "G1_F1": 0.0213,
+   "G2_N1": 9.3045,
+   "G3_N3": 0.2244,
+   "M1_Tree": 0.086,
+   "M2_LogReg": 0.3824,
+   "M3_Forest": 1.0415,
+   "M4_HGB": 4.9288
+  },
+  "10000": {
+   "S1_MI": 0.1284,
+   "S2_ANOVA_Chi2": 0.0902,
+   "S3_dCor": 1.7702,
+   "S4_HSIC": 1.9271,
+   "G1_F1": 0.0136,
+   "G2_N1": 9.4184,
+   "G3_N3": 0.2477,
+   "M1_Tree": 0.1583,
+   "M2_LogReg": 0.6317,
+   "M3_Forest": 2.289,
+   "M4_HGB": 7.0644
+  },
+  "20000": {
+   "S1_MI": 0.131,
+   "S2_ANOVA_Chi2": 0.1059,
+   "S3_dCor": 2.1056,
+   "S4_HSIC": 2.0248,
+   "G1_F1": 0.0164,
+   "G2_N1": 10.198,
+   "G3_N3": 0.2301,
+   "M1_Tree": 0.1577,
+   "M2_LogReg": 0.6421,
+   "M3_Forest": 2.1602,
+   "M4_HGB": 6.8233
+  },
+  "48842": {
+   "S1_MI": 0.1324,
+   "S2_ANOVA_Chi2": 0.1566,
+   "S3_dCor": 1.9556,
+   "S4_HSIC": 1.7996,
+   "G1_F1": 0.0065,
+   "G2_N1": 8.9958,
+   "G3_N3": 0.2321,
+   "M1_Tree": 0.1745,
+   "M2_LogReg": 0.6292,
+   "M3_Forest": 2.0627,
+   "M4_HGB": 7.4917
+  }
+ },
+ "runtime_full_test": {
+  "1000": {
+   "G1_F1 (full test, B=200)": 0.168,
+   "G2_N1 (full test, B=200)": 0.229,
+   "G3_N3 (full test, B=200)": 0.017,
+   "S1_MI (full test, B=200)": 9.573,
+   "S3_dCor (full test, B=200)": 0.124,
+   "S4_HSIC (full test, B=200)": 0.112
+  },
+  "5000": {
+   "G1_F1 (full test, B=200)": 1.123,
+   "G2_N1 (full test, B=200)": 9.987,
+   "G3_N3 (full test, B=200)": 0.251,
+   "S1_MI (full test, B=200)": 26.361,
+   "S3_dCor (full test, B=200)": 4.649,
+   "S4_HSIC (full test, B=200)": 4.554
+  },
+  "10000": {
+   "G1_F1 (full test, B=200)": 0.901,
+   "G2_N1 (full test, B=200)": 9.691,
+   "G3_N3 (full test, B=200)": 0.243,
+   "S1_MI (full test, B=200)": 27.006,
+   "S3_dCor (full test, B=200)": 4.109,
+   "S4_HSIC (full test, B=200)": 3.709
+  },
+  "20000": {
+   "G1_F1 (full test, B=200)": 0.863,
+   "G2_N1 (full test, B=200)": 10.15,
+   "G3_N3 (full test, B=200)": 0.273,
+   "S1_MI (full test, B=200)": 27.297,
+   "S3_dCor (full test, B=200)": 4.481,
+   "S4_HSIC (full test, B=200)": 4.721
+  },
+  "48842": {
+   "G1_F1 (full test, B=200)": 0.952,
+   "G2_N1 (full test, B=200)": 9.881,
+   "G3_N3 (full test, B=200)": 0.238,
+   "S1_MI (full test, B=200)": 28.54,
+   "S3_dCor (full test, B=200)": 4.607,
+   "S4_HSIC (full test, B=200)": 4.098
+  }
+ },
+ "hgb_cv_seconds": {
+  "1000": 2.472,
+  "5000": 5.033,
+  "10000": 7.219,
+  "20000": 8.573,
+  "48842": 20.196
+ },
+ "pareto_n5000": [
+  "S2_ANOVA_Chi2",
+  "G1_F1",
+  "M1_Tree",
+  "M3_Forest",
+  "M4_HGB"
+ ],
+ "spearman_family": {
+  "geometric": 0.94,
+  "model-based": 0.953,
+  "statistical": 0.96
+ },
+ "spearman_mean": {
+  "S1_MI": 0.898,
+  "S2_ANOVA_Chi2": 0.978,
+  "S3_dCor": 0.982,
+  "S4_HSIC": 0.981,
+  "G1_F1": 0.979,
+  "G2_N1": 0.935,
+  "G3_N3": 0.906,
+  "M1_Tree": 0.957,
+  "M2_LogReg": 0.968,
+  "M3_Forest": 0.956,
+  "M4_HGB": 0.932
+ },
+ "semi_fpr_q1": {
+  "G1_F1": 0.025,
+  "G2_N1": 0.0,
+  "G3_N3": 0.075,
+  "M1_Tree": 0.025,
+  "M2_LogReg": 0.05,
+  "M3_Forest": 0.025,
+  "M4_HGB": 0.125,
+  "S1_MI": 0.025,
+  "S2_ANOVA_Chi2": 0.025,
+  "S3_dCor": 0.0,
+  "S4_HSIC": 0.0
+ },
+ "stage1": "S4_HSIC",
+ "stage2": "M4_HGB",
+ "protocol_B": {
+  "two_stage_power": 0.5192307692307693,
+  "best_single": "M4_HGB",
+  "best_single_power": 0.532051282051282,
+  "two_stage_fpr_holdout": 0.02727272727272727
+ },
+ "protocol_semi": {
+  "two_stage_power": 0.89,
+  "best_single_power": 0.75,
+  "two_stage_fpr_q1": 0.0,
+  "best_single_fpr_q1": 0.125
+ },
+ "semi_power": {
+  "S1_MI": 0.675,
+  "S2_ANOVA_Chi2": 0.88,
+  "S3_dCor": 0.92,
+  "S4_HSIC": 0.92,
+  "G1_F1": 0.865,
+  "G2_N1": 0.695,
+  "G3_N3": 0.66,
+  "M1_Tree": 0.81,
+  "M2_LogReg": 0.84,
+  "M3_Forest": 0.81,
+  "M4_HGB": 0.75
+ },
+ "case_p": {
+  "Adult": {
+   "S1_MI": 0.0054,
+   "S2_ANOVA_Chi2": 0.0,
+   "S3_dCor": 0.005,
+   "S4_HSIC": 0.005,
+   "G1_F1": 0.005,
+   "G2_N1": 0.005,
+   "G3_N3": 0.005,
+   "M1_Tree": 0.005,
+   "M2_LogReg": 0.005,
+   "M3_Forest": 0.0244,
+   "M4_HGB": 0.0244
+  },
+  "NSW (randomised)": {
+   "S1_MI": 0.024,
+   "S2_ANOVA_Chi2": 0.0172,
+   "S3_dCor": 0.019,
+   "S4_HSIC": 0.036,
+   "G1_F1": 0.011,
+   "G2_N1": 0.9011,
+   "G3_N3": 0.5155,
+   "M1_Tree": 0.027,
+   "M2_LogReg": 0.033,
+   "M3_Forest": 0.01,
+   "M4_HGB": 0.3682
+  },
+  "Thornton (randomised)": {
+   "S1_MI": 0.006,
+   "S2_ANOVA_Chi2": 0.1055,
+   "S3_dCor": 0.0319,
+   "S4_HSIC": 0.0259,
+   "G1_F1": 0.1058,
+   "G2_N1": 0.1617,
+   "G3_N3": 0.495,
+   "M1_Tree": 0.012,
+   "M2_LogReg": 0.0379,
+   "M3_Forest": 0.01,
+   "M4_HGB": 0.005
+  },
+  "Thornton incl. village": {
+   "S1_MI": 0.004,
+   "S2_ANOVA_Chi2": 0.0,
+   "S3_dCor": 0.002,
+   "S4_HSIC": 0.002,
+   "G1_F1": 0.002,
+   "G2_N1": 0.002,
+   "G3_N3": 0.002,
+   "M1_Tree": 0.01,
+   "M2_LogReg": 0.002,
+   "M3_Forest": 0.005,
+   "M4_HGB": 0.005
+  }
+ },
+ "case_verdicts": {
+  "Adult": "signal detected",
+  "NSW (randomised)": "no signal detected",
+  "Thornton (randomised)": "signal detected",
+  "Thornton incl. village": "signal detected"
+ },
+ "case_gains": [
+  {
+   "dataset": "Adult",
+   "probe": "M1_Tree",
+   "gain_mean": 0.3582,
+   "gain_lo": 0.3549,
+   "gain_hi": 0.3597
+  },
+  {
+   "dataset": "Adult",
+   "probe": "M2_LogReg",
+   "gain_mean": 0.4052,
+   "gain_lo": 0.405,
+   "gain_hi": 0.4054
+  },
+  {
+   "dataset": "Adult",
+   "probe": "M3_Forest",
+   "gain_mean": 0.416,
+   "gain_lo": 0.4156,
+   "gain_hi": 0.4165
+  },
+  {
+   "dataset": "Adult",
+   "probe": "M4_HGB",
+   "gain_mean": 0.4283,
+   "gain_lo": 0.428,
+   "gain_hi": 0.4286
+  },
+  {
+   "dataset": "NSW (randomised)",
+   "probe": "M1_Tree",
+   "gain_mean": 0.0363,
+   "gain_lo": 0.0159,
+   "gain_hi": 0.0643
+  },
+  {
+   "dataset": "NSW (randomised)",
+   "probe": "M2_LogReg",
+   "gain_mean": 0.0559,
+   "gain_lo": 0.0481,
+   "gain_hi": 0.0624
+  },
+  {
+   "dataset": "NSW (randomised)",
+   "probe": "M3_Forest",
+   "gain_mean": 0.0559,
+   "gain_lo": 0.0334,
+   "gain_hi": 0.0818
+  },
+  {
+   "dataset": "NSW (randomised)",
+   "probe": "M4_HGB",
+   "gain_mean": 0.0064,
+   "gain_lo": -0.0247,
+   "gain_hi": 0.0517
+  },
+  {
+   "dataset": "Thornton (randomised)",
+   "probe": "M1_Tree",
+   "gain_mean": 0.0334,
+   "gain_lo": 0.0218,
+   "gain_hi": 0.048
+  },
+  {
+   "dataset": "Thornton (randomised)",
+   "probe": "M2_LogReg",
+   "gain_mean": 0.0215,
+   "gain_lo": 0.0178,
+   "gain_hi": 0.0281
+  },
+  {
+   "dataset": "Thornton (randomised)",
+   "probe": "M3_Forest",
+   "gain_mean": 0.0411,
+   "gain_lo": 0.0374,
+   "gain_hi": 0.046
+  },
+  {
+   "dataset": "Thornton (randomised)",
+   "probe": "M4_HGB",
+   "gain_mean": 0.0584,
+   "gain_lo": 0.0529,
+   "gain_hi": 0.0663
+  },
+  {
+   "dataset": "Thornton incl. village",
+   "probe": "M1_Tree",
+   "gain_mean": 0.0334,
+   "gain_lo": 0.0329,
+   "gain_hi": 0.0346
+  },
+  {
+   "dataset": "Thornton incl. village",
+   "probe": "M2_LogReg",
+   "gain_mean": 0.1773,
+   "gain_lo": 0.1677,
+   "gain_hi": 0.1823
+  },
+  {
+   "dataset": "Thornton incl. village",
+   "probe": "M3_Forest",
+   "gain_mean": 0.17,
+   "gain_lo": 0.1587,
+   "gain_hi": 0.177
+  },
+  {
+   "dataset": "Thornton incl. village",
+   "probe": "M4_HGB",
+   "gain_mean": 0.1416,
+   "gain_lo": 0.1375,
+   "gain_hi": 0.1449
+  }
+ ],
+ "per_feature_null_datasets": [
+  {
+   "dataset": "NSW (randomised)",
+   "feature": "nodegree",
+   "p_value": 0.0021,
+   "rejected_by_BH": true
+  },
+  {
+   "dataset": "NSW (randomised)",
+   "feature": "educ",
+   "p_value": 0.0343,
+   "rejected_by_BH": false
+  },
+  {
+   "dataset": "Thornton (randomised)",
+   "feature": "age",
+   "p_value": 0.0352,
+   "rejected_by_BH": false
+  }
+ ],
+ "design_check": [
+  {
+   "probe": "S3_dCor",
+   "statistic": 0.0466,
+   "p_ordinary_permutation": 0.0249,
+   "p_within_village_permutation": 0.3532
+  },
+  {
+   "probe": "M3_Forest",
+   "statistic": 0.5552,
+   "p_ordinary_permutation": 0.005,
+   "p_within_village_permutation": 0.0348
+  },
+  {
+   "probe": "M4_HGB",
+   "statistic": 0.5736,
+   "p_ordinary_permutation": 0.005,
+   "p_within_village_permutation": 0.0149
+  },
+  {
+   "probe": "distance -> village (1-NN accuracy)",
+   "statistic": 0.4436,
+   "p_ordinary_permutation": NaN,
+   "p_within_village_permutation": NaN
+  },
+  {
+   "probe": "majority-village baseline accuracy",
+   "statistic": 0.0442,
+   "p_ordinary_permutation": NaN,
+   "p_within_village_permutation": NaN
+  }
+ ],
+ "ojala": [
+  {
+   "dataset": "Adult (n=2000)",
+   "classifier": "decision_tree",
+   "acc": 0.814,
+   "p_test1": 0.005,
+   "p_test2": 1.0
+  },
+  {
+   "dataset": "Adult (n=2000)",
+   "classifier": "naive_bayes",
+   "acc": 0.328,
+   "p_test1": 0.005,
+   "p_test2": 1.0
+  },
+  {
+   "dataset": "Adult (n=2000)",
+   "classifier": "1nn",
+   "acc": 0.7855,
+   "p_test1": 0.005,
+   "p_test2": 1.0
+  },
+  {
+   "dataset": "Adult (n=2000)",
+   "classifier": "svm_rbf",
+   "acc": 0.8465,
+   "p_test1": 0.005,
+   "p_test2": 1.0
+  },
+  {
+   "dataset": "Pima",
+   "classifier": "decision_tree",
+   "acc": 0.7018,
+   "p_test1": 0.005,
+   "p_test2": 0.9204
+  },
+  {
+   "dataset": "Pima",
+   "classifier": "naive_bayes",
+   "acc": 0.7578,
+   "p_test1": 0.005,
+   "p_test2": 1.0
+  },
+  {
+   "dataset": "Pima",
+   "classifier": "1nn",
+   "acc": 0.7109,
+   "p_test1": 0.005,
+   "p_test2": 0.8458
+  },
+  {
+   "dataset": "Pima",
+   "classifier": "svm_rbf",
+   "acc": 0.763,
+   "p_test1": 0.005,
+   "p_test2": 1.0
+  },
+  {
+   "dataset": "Banknote",
+   "classifier": "decision_tree",
+   "acc": 0.9854,
+   "p_test1": 0.005,
+   "p_test2": 0.005
+  },
+  {
+   "dataset": "Banknote",
+   "classifier": "naive_bayes",
+   "acc": 0.8382,
+   "p_test1": 0.005,
+   "p_test2": 1.0
+  },
+  {
+   "dataset": "Banknote",
+   "classifier": "1nn",
+   "acc": 0.9985,
+   "p_test1": 0.005,
+   "p_test2": 0.005
+  },
+  {
+   "dataset": "Banknote",
+   "classifier": "svm_rbf",
+   "acc": 1.0,
+   "p_test1": 0.005,
+   "p_test2": 0.005
+  },
+  {
+   "dataset": "Breast cancer",
+   "classifier": "decision_tree",
+   "acc": 0.9244,
+   "p_test1": 0.005,
+   "p_test2": 1.0
+  },
+  {
+   "dataset": "Breast cancer",
+   "classifier": "naive_bayes",
+   "acc": 0.9367,
+   "p_test1": 0.005,
+   "p_test2": 1.0
+  },
+  {
+   "dataset": "Breast cancer",
+   "classifier": "1nn",
+   "acc": 0.9525,
+   "p_test1": 0.005,
+   "p_test2": 1.0
+  },
+  {
+   "dataset": "Breast cancer",
+   "classifier": "svm_rbf",
+   "acc": 0.9754,
+   "p_test1": 0.005,
+   "p_test2": 1.0
+  },
+  {
+   "dataset": "Synthetic linear",
+   "classifier": "decision_tree",
+   "acc": 0.61,
+   "p_test1": 0.005,
+   "p_test2": 0.0746
+  },
+  {
+   "dataset": "Synthetic linear",
+   "classifier": "naive_bayes",
+   "acc": 0.698,
+   "p_test1": 0.005,
+   "p_test2": 0.398
+  },
+  {
+   "dataset": "Synthetic linear",
+   "classifier": "1nn",
+   "acc": 0.601,
+   "p_test1": 0.005,
+   "p_test2": 0.2189
+  },
+  {
+   "dataset": "Synthetic linear",
+   "classifier": "svm_rbf",
+   "acc": 0.68,
+   "p_test1": 0.005,
+   "p_test2": 0.4577
+  },
+  {
+   "dataset": "Synthetic interaction",
+   "classifier": "decision_tree",
+   "acc": 0.511,
+   "p_test1": 0.2488,
+   "p_test2": 0.3831
+  },
+  {
+   "dataset": "Synthetic interaction",
+   "classifier": "naive_bayes",
+   "acc": 0.478,
+   "p_test1": 0.8209,
+   "p_test2": 0.9652
+  },
+  {
+   "dataset": "Synthetic interaction",
+   "classifier": "1nn",
+   "acc": 0.54,
+   "p_test1": 0.0348,
+   "p_test2": 0.005
+  },
+  {
+   "dataset": "Synthetic interaction",
+   "classifier": "svm_rbf",
+   "acc": 0.644,
+   "p_test1": 0.005,
+   "p_test2": 0.005
+  },
+  {
+   "dataset": "NSW (randomised)",
+   "classifier": "decision_tree",
+   "acc": 0.5101,
+   "p_test1": 0.6667,
+   "p_test2": 0.8756
+  },
+  {
+   "dataset": "NSW (randomised)",
+   "classifier": "naive_bayes",
+   "acc": 0.5843,
+   "p_test1": 0.0697,
+   "p_test2": 0.3184
+  },
+  {
+   "dataset": "NSW (randomised)",
+   "classifier": "1nn",
+   "acc": 0.5079,
+   "p_test1": 0.597,
+   "p_test2": 0.7761
+  },
+  {
+   "dataset": "NSW (randomised)",
+   "classifier": "svm_rbf",
+   "acc": 0.5955,
+   "p_test1": 0.0597,
+   "p_test2": 0.4677
+  },
+  {
+   "dataset": "Adult, permuted labels",
+   "classifier": "decision_tree",
+   "acc": 0.62,
+   "p_test1": 0.791,
+   "p_test2": 0.7463
+  },
+  {
+   "dataset": "Adult, permuted labels",
+   "classifier": "naive_bayes",
+   "acc": 0.25,
+   "p_test1": 0.8507,
+   "p_test2": 0.2388
+  },
+  {
+   "dataset": "Adult, permuted labels",
+   "classifier": "1nn",
+   "acc": 0.633,
+   "p_test1": 0.607,
+   "p_test2": 0.6269
+  },
+  {
+   "dataset": "Adult, permuted labels",
+   "classifier": "svm_rbf",
+   "acc": 0.7605,
+   "p_test1": 0.8507,
+   "p_test2": 0.995
+  },
+  {
+   "dataset": "Thornton incl. village",
+   "classifier": "decision_tree",
+   "acc": 0.6832,
+   "p_test1": 0.005,
+   "p_test2": 0.597
+  },
+  {
+   "dataset": "Thornton incl. village",
+   "classifier": "naive_bayes",
+   "acc": 0.3437,
+   "p_test1": 0.0149,
+   "p_test2": 0.9154
+  },
+  {
+   "dataset": "Thornton incl. village",
+   "classifier": "1nn",
+   "acc": 0.677,
+   "p_test1": 0.005,
+   "p_test2": 0.4527
+  },
+  {
+   "dataset": "Thornton incl. village",
+   "classifier": "svm_rbf",
+   "acc": 0.7642,
+   "p_test1": 0.9055,
+   "p_test2": 0.592
+  },
+  {
+   "dataset": "Thornton (randomised)",
+   "classifier": "decision_tree",
+   "acc": 0.6474,
+   "p_test1": 0.0995,
+   "p_test2": 0.806
+  },
+  {
+   "dataset": "Thornton (randomised)",
+   "classifier": "naive_bayes",
+   "acc": 0.7659,
+   "p_test1": 0.5721,
+   "p_test2": 1.0
+  },
+  {
+   "dataset": "Thornton (randomised)",
+   "classifier": "1nn",
+   "acc": 0.6532,
+   "p_test1": 0.0995,
+   "p_test2": 0.3085
+  },
+  {
+   "dataset": "Thornton (randomised)",
+   "classifier": "svm_rbf",
+   "acc": 0.7659,
+   "p_test1": 0.8657,
+   "p_test2": 0.9154
+  }
+ ],
+ "sanity": {
+  "Null synthetic (control)": {
+   "verdict": "clean",
+   "max_single_feature_auc": "0.5427747375832053",
+   "best_single_feature": "x7",
+   "exact_duplicates": "0"
+  },
+  "Null + identifier column": {
+   "verdict": "leakage suspected",
+   "max_single_feature_auc": "0.5427747375832053",
+   "best_single_feature": "x7",
+   "exact_duplicates": "0"
+  },
+  "Null + crude leak (0.5% flipped copy of y)": {
+   "verdict": "leakage suspected",
+   "max_single_feature_auc": "0.994991679467486",
+   "best_single_feature": "leak",
+   "exact_duplicates": "0"
+  },
+  "Null + subtle leak (10% flipped copy of y)": {
+   "verdict": "clean",
+   "max_single_feature_auc": "0.900089605734767",
+   "best_single_feature": "leak",
+   "exact_duplicates": "0"
+  },
+  "NSW pre-treatment only": {
+   "verdict": "clean",
+   "max_single_feature_auc": "0.5632536382536383",
+   "best_single_feature": "nodegree",
+   "exact_duplicates": "73"
+  },
+  "NSW + re78 (post-treatment)": {
+   "verdict": "clean",
+   "max_single_feature_auc": "0.5696985446985448",
+   "best_single_feature": "re78",
+   "exact_duplicates": "15"
+  },
+  "Thornton pre-treatment only": {
+   "verdict": "clean",
+   "max_single_feature_auc": "0.5226947952527212",
+   "best_single_feature": "age",
+   "exact_duplicates": "45"
+  },
+  "Thornton + village": {
+   "verdict": "clean",
+   "max_single_feature_auc": "0.6587489013997128",
+   "best_single_feature": "villnum",
+   "exact_duplicates": "45"
+  },
+  "Thornton + tinc (incentive amount)": {
+   "verdict": "leakage suspected",
+   "max_single_feature_auc": "1.0",
+   "best_single_feature": "tinc",
+   "exact_duplicates": "11"
+  },
+  "Adult": {
+   "verdict": "clean",
+   "max_single_feature_auc": "0.7779633136535773",
+   "best_single_feature": "relationship",
+   "exact_duplicates": "52"
+  },
+  "Pima": {
+   "verdict": "clean",
+   "max_single_feature_auc": "0.7881305970149254",
+   "best_single_feature": "glucose",
+   "exact_duplicates": "0"
+  },
+  "Banknote": {
+   "verdict": "clean",
+   "max_single_feature_auc": "0.927332085538488",
+   "best_single_feature": "variance",
+   "exact_duplicates": "24"
+  },
+  "Breast cancer": {
+   "verdict": "clean",
+   "max_single_feature_auc": "0.9754505575815232",
+   "best_single_feature": "worst_perimeter",
+   "exact_duplicates": "0"
+  }
+ },
+ "leak_p": {
+  "NSW + re78 (post-treatment)": {
+   "S1_MI": 0.018,
+   "S2_ANOVA_Chi2": 0.0193,
+   "S3_dCor": 0.008,
+   "S4_HSIC": 0.016,
+   "G1_F1": 0.008,
+   "G2_N1": 0.018,
+   "G3_N3": 0.018,
+   "M1_Tree": 0.0659,
+   "M2_LogReg": 0.004,
+   "M3_Forest": 0.0099,
+   "M4_HGB": 0.0495
+  },
+  "NSW pre-treatment only": {
+   "S1_MI": 0.016,
+   "S2_ANOVA_Chi2": 0.0172,
+   "S3_dCor": 0.012,
+   "S4_HSIC": 0.0279,
+   "G1_F1": 0.008,
+   "G2_N1": 0.8882,
+   "G3_N3": 0.507,
+   "M1_Tree": 0.0339,
+   "M2_LogReg": 0.0379,
+   "M3_Forest": 0.0099,
+   "M4_HGB": 0.3069
+  },
+  "Null + subtle leak (10% flipped copy of y)": {
+   "S1_MI": 0.0259,
+   "S2_ANOVA_Chi2": 0.0,
+   "S3_dCor": 0.002,
+   "S4_HSIC": 0.002,
+   "G1_F1": 0.002,
+   "G2_N1": 0.002,
+   "G3_N3": 0.002,
+   "M1_Tree": 0.002,
+   "M2_LogReg": 0.002,
+   "M3_Forest": 0.0099,
+   "M4_HGB": 0.0099
+  },
+  "Null synthetic (control)": {
+   "S1_MI": 0.0499,
+   "S2_ANOVA_Chi2": 0.3002,
+   "S3_dCor": 0.5788,
+   "S4_HSIC": 0.5948,
+   "G1_F1": 0.2675,
+   "G2_N1": 0.9082,
+   "G3_N3": 0.6527,
+   "M1_Tree": 0.9142,
+   "M2_LogReg": 0.4331,
+   "M3_Forest": 0.6337,
+   "M4_HGB": 0.6733
+  }
+ },
+ "verdicts": [
+  {
+   "Hypothesis": "H1a",
+   "Statement": "Permutation-wrapped probes are calibrated",
+   "Evidence": "10/11 probes' permutation FPR intervals contain 0.05; MC hold-out: 11/11",
+   "Verdict": "supported"
+  },
+  {
+   "Hypothesis": "H1b",
+   "Statement": "Uncorrected per-feature aggregation inflates FPR; Simes/BH restores it",
+   "Evidence": "uncorrected FPR 0.40/0.92/1.00 at p=10/50/200; Simes max 0.090",
+   "Verdict": "supported"
+  },
+  {
+   "Hypothesis": "H1c",
+   "Statement": "Model-based probes most powerful at small n",
+   "Evidence": "highest mean power at n=200: M4_HGB (0.29); best model-free: G1_F1 (0.21)",
+   "Verdict": "supported"
+  },
+  {
+   "Hypothesis": "H2a",
+   "Statement": "Per-feature probes blind to interaction-only signal",
+   "Evidence": "max power on interaction signal: S1 0.12, S2 0.08, G1 0.08",
+   "Verdict": "supported"
+  },
+  {
+   "Hypothesis": "H2b",
+   "Statement": "Distance-based probes lose power faster with irrelevant features",
+   "Evidence": "mean power drop 0\u2192200 irrelevant features: distance-based 0.74, model-based 0.29",
+   "Verdict": "supported"
+  },
+  {
+   "Hypothesis": "H2c",
+   "Statement": "AUC-based probes stay calibrated and useful under 10:90 imbalance",
+   "Evidence": "max FPR at 10% positives (A1): 0.058; model-based power at imbalance in Table (C)",
+   "Verdict": "supported"
+  },
+  {
+   "Hypothesis": "H3",
+   "Statement": "A model-free probe is Pareto-optimal at large n",
+   "Evidence": "Pareto-optimal at n=5000: S2_ANOVA_Chi2, G1_F1, M1_Tree, M3_Forest, M4_HGB (power at n \u2265 10,000 not simulated)",
+   "Verdict": "partly supported"
+  },
+  {
+   "Hypothesis": "H4a",
+   "Statement": "Model-based effect sizes track true strength better than geometric scores",
+   "Evidence": "mean Spearman rho: model-based 0.953, geometric 0.940, statistical 0.960",
+   "Verdict": "nominal only (difference < 0.02)"
+  },
+  {
+   "Hypothesis": "H4b",
+   "Statement": "Two-stage protocol \u2265 best single probe in power with FPR \u2264 \u03b1",
+   "Evidence": "power, design (B): two-stage 0.519 vs M4_HGB 0.532; validation (semi-synthetic): 0.890 vs M4_HGB 0.750 (best single probe on validation: S3_dCor 0.920); FPR q=1: 0.000",
+   "Verdict": "partly supported"
+  }
+ ]
+}

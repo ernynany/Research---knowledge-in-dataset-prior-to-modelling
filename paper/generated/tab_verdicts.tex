@@ -1,0 +1,22 @@
+\begin{table}[!t]
+\centering
+\caption{Verdicts on the pre-registered hypotheses.}
+\label{tab:verdicts}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lp{5.3cm}l}
+\hline
+Hypothesis & Statement & Verdict \\ \hline
+H1a & Permutation-wrapped probes are calibrated & supported \\
+H1b & Uncorrected per-feature aggregation inflates FPR; Simes/BH restores it & supported \\
+H1c & Model-based probes most powerful at small n & supported \\
+H2a & Per-feature probes blind to interaction-only signal & supported \\
+H2b & Distance-based probes lose power faster with irrelevant features & supported \\
+H2c & AUC-based probes stay calibrated and useful under 10:90 imbalance & supported \\
+H3 & A model-free probe is Pareto-optimal at large n & partly supported \\
+H4a & Model-based effect sizes track true strength better than geometric scores & nominal only (difference $<$ 0.02) \\
+H4b & Two-stage protocol $\ge$ best single probe in power with FPR $\le$ $\alpha$ & partly supported \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}

@@ -1,0 +1,17 @@
+0.1.0 – Implementation of 22 metrics.
+0.1.1 - Introduction of Complexity Calculator.
+0.2.0 - Including unit tests and documentation.
+0.3.0 - Documentation with examples, calculator hidden methods and optimization.
+0.3.1 - Updating requirements on PyPI.
+0.3.2 - Final documentation.
+0.4.0 - Remove gower library from requirements, create a local copy of required methods.
+0.4.1 - Fix gower import.
+0.5.0 - Add regression measures.
+0.5.1 - Multiclass support and changes in ComplexityCalculator -- adjustments to regression; Optimization of C3 measure.
+0.5.2 - Include complexity measures as default in init.
+0.5.4 - Normalize all feature correlation input data by default.
+0.5.5 - Upgrade score and report methods.
+0.5.6 - Handle one class instances only for F1v measure.
+0.5.8 - Add UserWarning in case not all parameters in [metrics, colors, ranges, weights] are passed.
+0.5.10 - Fix calculation of classification.L1 to use scikit-learn decision function, improve documentation (labels in [0,1]).
+0.5.11 - Fix implementation of classification.N2 to consider distance to NN only.

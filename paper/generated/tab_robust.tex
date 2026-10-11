@@ -1,0 +1,24 @@
+\begin{table}[!t]
+\centering
+\caption{Experiment C: power at Bayes AUC 0.70 and $n=1000$, averaged over the three signal types, by number of irrelevant features. Left block: balanced classes; right block: 10\% positives.}
+\label{tab:robust}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lcccccc}
+\hline
+Probe & 0 & 20 & 200 & 0  & 20  & 200  \\ \hline
+S1 MI & 0.35 & 0.08 & 0.04 & 0.33 & 0.09 & 0.07 \\
+S2 ANOVA/$\chi^2$ & 0.36 & 0.36 & 0.35 & 0.44 & 0.37 & 0.29 \\
+S3 dCor & 0.99 & 0.49 & 0.35 & 0.77 & 0.47 & 0.37 \\
+S4 HSIC & 1.00 & 0.52 & 0.35 & 0.79 & 0.49 & 0.24 \\
+G1 F1 & 0.39 & 0.33 & 0.35 & 0.44 & 0.36 & 0.25 \\
+G2 N1 & 0.99 & 0.55 & 0.13 & 0.23 & 0.08 & 0.07 \\
+G3 N3 & 0.88 & 0.45 & 0.08 & 0.28 & 0.09 & 0.04 \\
+M1 Tree & 0.84 & 0.65 & 0.48 & 0.41 & 0.53 & 0.41 \\
+M2 LogReg & 0.40 & 0.37 & 0.35 & 0.39 & 0.35 & 0.23 \\
+M3 Forest & 1.00 & 0.77 & 0.60 & 0.93 & 0.75 & 0.44 \\
+M4 HGB & 1.00 & 0.93 & 0.65 & 0.76 & 0.59 & 0.25 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}

@@ -1,0 +1,110 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{Calibration (RQ1: H1a, H1b)}
+
+Table~\ref{tab:calibration} shows that every probe except S1 kept its false-positive rate (FPR) close to $\alpha$ under exact permutation tests (0.033--0.058 over 240 null datasets; M3 0.100 over only 30, with an interval reaching 0.02). S1 never rejected. This is a resolution effect rather than good behaviour: with $m=25$ features and $B=100$ permutations, the smallest per-feature $p$-value ($1/101$) cannot clear the first Simes threshold $\alpha/m=0.002$. Per-feature permutation tests therefore need $B\ge m/\alpha$, here 500. Under the Monte Carlo null, all eleven probes had hold-out FPRs between 0.027 and 0.068, with every interval containing 0.05, and on a random 5\% sample of datasets the Monte Carlo and dataset-specific permutation $p$-values led to the same decision in 97.1\% of 210 comparisons (Spearman $\rho=0.989$). H1a is supported.
+
+\input{generated/tab_calibration.tex}
+
+Combining per-feature tests without correction was badly miscalibrated (Table~\ref{tab:multiple}): the FPR was 0.36--0.41 with 10 features, 0.90--0.95 with 50 and 1.00 with 200, closely tracking $1-0.95^p$. Simes/Benjamini--Hochberg aggregation brought it to 0.017--0.073, except for S1 at $n=200$ with 200 features (0.090, i.e.\ 27 of 300). H1b is supported.
+
+\input{generated/tab_multiple_testing.tex}
+
+\subsection{Power and Signal Type (RQ1, RQ2: H1c, H2a)}
+
+Fig.~\ref{fig:power} and Table~\ref{tab:power} show the central result: \emph{which probe is most powerful depends on the type of signal}. For linear signal, distance correlation and HSIC were strongest (mean power 0.78), closely followed by S2, F1 and logistic regression (0.74); their minimum detectable effect at $n=1000$ was a Bayes AUC of 0.59--0.64 (Table~\ref{tab:mde}). For nonlinear signal, whose classes differ in spread but not in mean, S2, F1 and logistic regression were blind (0.03), whereas the random forest (0.62), gradient boosting (0.58) and the shallow tree (0.52) detected it. For interaction-only signal, all per-feature probes stayed at the null level (maximum power: S1 0.12, S2 0.08, F1 0.08), supporting H2a. Only gradient boosting (0.49), the forest (0.36) and the neighbourhood measures N1/N3 (0.32) detected interaction signal, and only at $n\ge1000$; gradient boosting reached 80\% power at a Bayes AUC of 0.70 for $n=1000$ and 0.59 for $n=5000$.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.92\textwidth]{../figures/expB_power_curves.png}
+\caption{Experiment B: power against Bayes AUC by signal type (rows) and sample size (columns). Solid lines: model-based probes; dashed: statistical; dotted: geometric. Grey lines mark $\alpha=0.05$ and 80\% power.}
+\label{fig:power}
+\end{figure*}
+
+\input{generated/tab_power.tex}
+
+Across the 36 settings the probes differed strongly (Friedman $\chi^2=65.3$, $p=3.5\times10^{-10}$; Table~\ref{tab:ranks}); following~\cite{benavoli2016}, each probe was then compared with the best one by a Wilcoxon signed-rank test with Holm correction. Gradient boosting had the best mean rank (3.92). The random forest (Holm $p=0.41$), HSIC and distance correlation (both $p=0.091$) were not significantly worse; all other probes were. At $n=200$ every probe had low power (at most 0.29), with gradient boosting highest and F1 the best model-free probe (0.21). H1c is therefore supported in the narrow sense that a model-based probe was most powerful, but no probe is reliable at $n=200$ unless the signal is strong and linear.
+
+\input{generated/tab_ranks.tex}
+
+\input{generated/tab_mde.tex}
+
+\subsection{Robustness (RQ2: H2b, H2c)}
+
+Irrelevant features hurt the distance-based probes most (Table~\ref{tab:robust}). With balanced classes, power at Bayes AUC 0.70 fell from 0.99 to 0.35 for distance correlation, from 1.00 to 0.35 for HSIC, from 0.99 to 0.13 for N1 and from 0.88 to 0.08 for N3 as irrelevant features went from 0 to 200, an average drop of 0.74. The model-based probes fell by 0.29 on average (forest 1.00 to 0.60, gradient boosting 1.00 to 0.65), supporting H2b and agreeing with the known dimension sensitivity of distance- and kernel-based tests~\cite{ramdas2015}. Under 10\% positives, permutation tests stayed calibrated (largest pooled FPR 0.058), and the forest remained the most powerful probe (0.93, 0.75 and 0.44 for 0, 20 and 200 irrelevant features). The geometric neighbourhood measures were the most affected by imbalance (N1: 0.23 with no irrelevant features). H2c is supported.
+
+\input{generated/tab_robust.tex}
+
+\subsection{Cost (RQ3: H3)}
+
+On Adult subsamples (Table~\ref{tab:runtime}), one observed statistic cost 0.007--0.23~s for F1, N3, S1, S2 and the tree, about 2~s for distance correlation, HSIC and the forest, 9~s for N1 (dominated by the minimum spanning tree) and 7.5~s for gradient boosting, against 20.2~s for one 5-fold cross-validation of gradient boosting on all 48{,}842 rows. Because model-free probes reuse their label-independent preparation, their complete permutation test with $B=200$ took 0.2--28.5~s; a model-based test costs roughly $(B+1)$ times one cross-validation. At $n=5000$, S2, F1, the tree, the forest and gradient boosting were Pareto-optimal in power versus cost. A model-free probe is thus on the front, but power for $n\ge10{,}000$ was not simulated, so H3 is only partly supported.
+
+\input{generated/tab_runtime.tex}
+
+\subsection{Real Distributions (RQ4: H4a, H4b)}
+
+On the label-shuffled real datasets (Fig.~\ref{fig:semi}), every probe detected signal when at most half of the labels were shuffled. At $q=0.9$, distance correlation and HSIC still detected it in 62\% of replicates, S2 and F1 in about 40\%, and gradient boosting in 12\%. The signal in these four datasets is largely monotone in single features, which favours the dependence tests. At $q=1$ (exact null) the detection rate was 0--0.125 per probe (gradient boosting 5 of 40). All probe statistics tracked the retained signal fraction closely (mean Spearman $\rho$: statistical 0.960, model-based 0.953, geometric 0.940). The difference H4a predicted exists but is negligible, so H4a is only nominally supported.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.95\textwidth]{../figures/semisynthetic_detection.png}
+\caption{Semi-synthetic experiment: detection rate against the fraction $q$ of shuffled labels for each base dataset (10 replicates per point). At $q=1$ the labels are fully permuted, so the detection rate is the false-positive rate.}
+\label{fig:semi}
+\end{figure*}
+
+Selected on Experiment~B alone, the two-stage protocol used HSIC (stage~1) and gradient boosting (stage~2). In Experiment~B its power was 0.519, slightly below gradient boosting alone (0.532), with a hold-out FPR of 0.027. On the semi-synthetic validation data its power was 0.890, well above gradient boosting (0.750) but below HSIC alone (0.920), with no false positives in 40 null replicates. The protocol therefore offers robustness to signal type rather than the highest power in any single scenario, and H4b is partly supported.
+
+\subsection{Case Studies}
+
+Table~\ref{tab:cases} reports every probe on the real datasets. On \textbf{Adult}, all probes rejected $H_0$ at their smallest attainable $p$-value, and the AUC gain over the dummy model on the full data was 0.428 for gradient boosting (95\% interval 0.428--0.429; AUC 0.928) and 0.405 for logistic regression. Learning curves showed logistic regression saturating at about 0.905 from 1{,}000 rows, while gradient boosting kept improving to 0.928, so additional data mainly benefits flexible models.
+
+\input{generated/tab_cases.tex}
+
+The two \textbf{randomised experiments} were the most instructive cases. On \textbf{NSW}, eight of the eleven probes gave $p<0.05$, although the protocol's two stages did not reach $\alpha/2$ (HSIC $p=0.036$, gradient boosting $p=0.368$), so the protocol returned ``no signal detected''. The per-feature test traced the dependence to the no-degree indicator ($p=0.0021$, the only feature rejected by Benjamini--Hochberg; standardised mean difference $-0.30$). This is a chance imbalance in the subsample rather than a design feature, and the cross-validated AUC gains were small (logistic regression 0.056).
+
+On the \textbf{incentive experiment} with individual covariates only, gradient boosting ($p=0.005$, AUC gain 0.058) and the forest ($p=0.010$) detected dependence, and the protocol returned ``signal detected''. With village included, every probe rejected $H_0$ ($p\le0.01$; logistic-regression gain 0.177). Two diagnostics explain part of this. Distance alone identified a person's village with 44\% accuracy, against 4.4\% for the most common village. Under a design-aware test that permutes labels only within villages, distance correlation was no longer significant ($p=0.35$, against 0.025 under ordinary permutation). The tree ensembles, however, stayed significant (forest $p=0.035$, gradient boosting $p=0.015$), which points to further design structure that the public data do not document. In short, ``null by design'' is a claim about the design, and the probes found that it did not hold exactly in either randomised dataset.
+
+\subsection{Ojala--Garriga Replication}
+
+Table~\ref{tab:ojala} and Fig.~\ref{fig:ojala} summarise both tests. Test~1 was significant ($p=0.005$, the minimum) for all four classifiers on Adult, Pima, Banknote, Breast Cancer and the synthetic linear data, and non-significant for every classifier on Adult with permuted labels ($p\ge0.60$), NSW ($p\ge0.06$) and the incentive experiment with individual covariates ($p\ge0.10$). The interaction-only data separated the classifiers: the unpruned tree ($p=0.25$) and naive Bayes ($p=0.82$) missed the signal, whereas 1-NN ($p=0.035$) and the SVM ($p=0.005$) detected it. For exactly those two, Test~2 was also significant ($p=0.005$), correctly identifying that their signal lies in a dependency between features. Test~2 was also significant for the tree, 1-NN and SVM on Banknote, but not on Adult, Pima or Breast Cancer, where within-class permutation did not increase the error ($p\ge0.84$), consistent with signal carried by individual features.
+
+\input{generated/tab_ojala.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.92\textwidth]{../figures/ojala_garriga.png}
+\caption{Ojala--Garriga Tests 1 and 2: $-\log_{10}p$ per classifier and dataset ($k=200$ permutations; ceiling 2.3). Dashed line: $p=0.05$.}
+\label{fig:ojala}
+\end{figure*}
+
+Accuracy-based Test~1 and the AUC-based model probes disagreed on the incentive experiment (77\% positives): no classifier's accuracy beat its permutation distribution, whereas gradient boosting's AUC did ($p=0.005$). Under imbalance, accuracy is dominated by the majority class, so AUC is the more sensitive statistic.
+
+\subsection{Leakage}
+
+The sanity check (Table~\ref{tab:sanity}) flagged the identifier column, the crude leak (single-feature AUC 0.995) and the incentive amount in the incentive experiment (AUC 1.000). It passed the subtle leak (a copy of $y$ with 10\% flipped values, AUC 0.90), on which every probe rejected $H_0$ ($p\le0.026$), and it passed NSW with the post-treatment earnings \texttt{re78}. A clean sanity check is therefore no guarantee: post-outcome features must be excluded by reasoning about when each variable was measured.
+
+\input{generated/tab_sanity.tex}
+
+\FloatBarrier
+\section{Discussion}
+\label{sec:discussion}
+
+Table~\ref{tab:verdicts} summarises the hypothesis verdicts. Four findings matter most for practice.
+
+\textbf{No single family is sufficient.} Linear dependence tests (S2, F1, logistic regression) are efficient for additive signal but blind to signal that changes spread or lives in interactions, and the latter is exactly where flexible learners are needed. Distance correlation and HSIC are the best model-free compromise, but they degrade quickly with irrelevant features. Gradient boosting had the best overall rank, yet on the real, largely monotone datasets it was the least powerful model-based probe. Pairing a multivariate dependence test with a flexible learner is therefore a reasonable default, and Ojala--Garriga's Test~2 adds a cheap diagnostic of \emph{where} the signal lives.
+
+\textbf{Calibration is easy; aggregation and resolution are not.} Permutation wrapping made every probe's false-positive rate exact, including the descriptive complexity measures, which have no null distribution of their own (gap G2). The two practical traps are combining per-feature tests without correction, which raised the FPR to 0.90 with 50 features, and using too few permutations for a per-feature test, which made S1 unable to reject at all.
+
+\textbf{Small samples are the hard case.} At $n=200$ no probe exceeded 0.29 mean power, and most signals with Bayes AUC below 0.7 went undetected. A ``no signal detected'' verdict at that size says little unless it carries the MDE: for example, gradient boosting at $n=1000$ detects interaction signal only above a Bayes AUC of about 0.70.
+
+\textbf{``No signal by design'' must be verified.} Both randomised experiments carried detectable dependence: a chance covariate imbalance in NSW, and assignment probabilities that varied by village in the incentive experiment. The probes behaved correctly; the assumption was wrong. For practitioners this cuts both ways: a probe that rejects $H_0$ shows that the target depends on the features in \emph{this sample}, which is not the same as stable, useful signal. Effect sizes (NSW: AUC gain about 0.05) and design-aware nulls such as within-stratum permutation should accompany the verdict.
+
+\input{generated/tab_verdicts.tex}
+
+\textbf{Limitations.} Compute restrictions (two CPU cores, no GPU, GitHub-only network access) forced three deviations from the proposal: a random forest replaced TabPFN, scikit-learn's histogram gradient boosting replaced LightGBM, and power was simulated only up to $n=5000$ with 15--25 replicates per setting, which gives power estimates a standard error of up to 0.1. Synthetic features were Gaussian, so the categorical and mixed-type behaviour of the probes was tested only on the real datasets. Only binary targets and exchangeable rows were considered. Finally, the protocol's stages were selected on synthetic data whose signal types differ from those in the real datasets, which explains part of the gap between design and validation power.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Whether a tabular dataset holds learnable signal can be tested cheaply and with exact error control by wrapping statistical, geometric or model-based probes in a shared permutation layer. Across controlled, semi-synthetic and real data, the probes' power depended mainly on the type of signal: dependence tests excelled at linear signal, flexible learners at nonlinear and interaction signal, and neighbourhood complexity measures were sensitive to irrelevant features. A two-stage protocol (HSIC, then gradient boosting, Bonferroni-split) kept the false-positive rate below $\alpha$ and was robust across signal types, though not the most powerful choice in every scenario. The replication of Ojala and Garriga's tests showed that Test~2 reliably reveals interaction signal. Datasets that were null by design, finally, turned out not to be null in the sample, a reminder that the verdict ``signal detected'' always needs an effect size and a check of the design behind the data. Future work should add tabular foundation models, regression targets and power estimates for $n>5000$.

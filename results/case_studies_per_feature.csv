@@ -1,0 +1,12 @@
+dataset,feature,p_value,rejected_by_BH
+NSW (randomised),nodegree,0.0021468543756801464,True
+NSW (randomised),educ,0.03428175111801609,False
+NSW (randomised),hisp,0.10886898726859187,False
+NSW (randomised),age,0.2647642688057155,False
+NSW (randomised),re75,0.38225383148041286,False
+NSW (randomised),marr,0.39360001605637096,False
+NSW (randomised),black,0.7440210684680046,False
+NSW (randomised),re74,0.9823182533535603,False
+Thornton (randomised),age,0.03517760480918166,False
+Thornton (randomised),distvct,0.10576229313446936,False
+Thornton (randomised),hiv2004,0.9052228304688188,False

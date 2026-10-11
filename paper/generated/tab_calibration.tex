@@ -1,0 +1,25 @@
+\begin{table}[!t]
+\centering
+\caption{False-positive rates at $\alpha=0.05$ on null data (number of null datasets in brackets).}
+\label{tab:calibration}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lcc}
+\hline
+Probe & Permutation FPR [95\% CI] & Monte Carlo FPR [95\% CI] \\ \hline
+S1 MI & 0.000 [0.000, 0.015] (240) & 0.045 [0.022, 0.082] (220) \\
+S2 ANOVA/$\chi^2$ & 0.046 [0.023, 0.081] (240) & 0.055 [0.028, 0.093] (220) \\
+S3 dCor & 0.054 [0.029, 0.091] (240) & 0.050 [0.025, 0.088] (220) \\
+S4 HSIC & 0.054 [0.029, 0.091] (240) & 0.055 [0.028, 0.093] (220) \\
+G1 F1 & 0.037 [0.017, 0.070] (240) & 0.045 [0.022, 0.082] (220) \\
+G2 N1 & 0.054 [0.029, 0.091] (240) & 0.064 [0.035, 0.104] (220) \\
+G3 N3 & 0.058 [0.032, 0.096] (240) & 0.068 [0.039, 0.110] (220) \\
+M1 Tree & 0.033 [0.014, 0.065] (240) & 0.050 [0.025, 0.088] (220) \\
+M2 LogReg & 0.058 [0.032, 0.096] (240) & 0.055 [0.028, 0.093] (220) \\
+M3 Forest & 0.100 [0.021, 0.265] (30) & 0.027 [0.010, 0.058] (220) \\
+M4 HGB & 0.033 [0.001, 0.172] (30) & 0.032 [0.013, 0.064] (220) \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\par\vspace{2pt}\parbox{0.95\linewidth}{\scriptsize Permutation: Experiment A1, dataset-specific label permutations. Monte Carlo: hold-out null datasets of Experiment B tested against the simulated null.}
+\end{table}

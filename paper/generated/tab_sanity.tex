@@ -1,0 +1,26 @@
+\begin{table}[!t]
+\centering
+\caption{Experiment D: sanity check verdicts.}
+\label{tab:sanity}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llcc}
+\hline
+Case & Sanity verdict & Best single feature & Its AUC \\ \hline
+Null synthetic (control) & clean & x7 & 0.543 \\
+Null + identifier column & leakage suspected & x7 & 0.543 \\
+Null + crude leak (0.5\% flipped copy of y) & leakage suspected & leak & 0.995 \\
+Null + subtle leak (10\% flipped copy of y) & clean & leak & 0.900 \\
+NSW pre-treatment only & clean & nodegree & 0.563 \\
+NSW + re78 (post-treatment) & clean & re78 & 0.570 \\
+Thornton pre-treatment only & clean & age & 0.523 \\
+Thornton + village & clean & villnum & 0.659 \\
+Thornton + tinc (incentive amount) & leakage suspected & tinc & 1.000 \\
+Adult & clean & relationship & 0.778 \\
+Pima & clean & glucose & 0.788 \\
+Banknote & clean & variance & 0.927 \\
+Breast cancer & clean & worst\_perimeter & 0.975 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}

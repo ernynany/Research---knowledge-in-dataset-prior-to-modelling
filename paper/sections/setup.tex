@@ -1,0 +1,26 @@
+\section{Experimental Setup}
+\label{sec:setup}
+
+\subsection{Datasets}
+
+Table~\ref{tab:datasets} summarises the real datasets. \textbf{Adult} (census income $>$\$50K; 48{,}842 rows, 14 features, 8 categorical) is the dataset with known signal~\cite{dua2019}. Two randomised experiments supply datasets with \textbf{no signal by design}, because their target is an assignment made by lottery and is therefore independent of pre-treatment covariates in the population. (i) The National Supported Work (NSW) job-training experiment, Dehejia--Wahba subsample (445 people; 185 treated)~\cite{imbens2015,cunningham2021}: target = treatment assignment, features = age, education, ethnicity, marital status, no-degree indicator and 1974/1975 earnings. Earnings in 1978 (\texttt{re78}) were measured after treatment and are excluded, but they are reused as a realistic post-outcome leak. (ii) The Malawi HIV-results incentive experiment analysed in~\cite{cunningham2021} (2{,}901 people): target = whether a person was randomly offered a cash incentive, features = age, baseline HIV status and distance to the results centre. Village (119 levels) is \emph{not} part of the null dataset: during the study, incentive rates turned out to differ strongly between villages ($\chi^2=402$, 119 d.f., $p=2\times10^{-32}$; village-level rates from 0.53 to 0.97 between the 10th and 90th percentiles), so assignment probabilities were not constant across villages. The version with village is kept as an instructive extra case. The incentive amount \texttt{tinc} determines the target exactly ($\texttt{tinc}>0 \Leftrightarrow$ target $=1$) and is used as a deterministic leak. Pima Indians Diabetes, Banknote Authentication and Breast Cancer Wisconsin~\cite{dua2019} add small datasets of differing difficulty.
+
+\input{generated/tab_datasets.tex}
+
+\textbf{Synthetic data.} Features are i.i.d.\ $\mathcal{N}(0,1)$ and $P(Y{=}1\mid x)=\sigma(s\,g(x)+b)$, with $g(x)=\sum_{j\le5}x_j/\sqrt5$ (linear), $g(x)=(\sum_{j\le 5}x_j^2-5)/\sqrt{10}$ (nonlinear: the classes differ in spread, not in mean) or $g(x)=x_1x_2$ (interaction-only: with balanced classes each feature alone is independent of $Y$). Because $P(Y\mid x)$ is known, the Bayes AUC can be computed exactly; $s$ and $b$ are solved numerically to hit a target Bayes AUC (0.55, 0.60, 0.70 or 0.85) and positive rate (0.5 or 0.1). Irrelevant $\mathcal{N}(0,1)$ columns are appended.
+
+\textbf{Semi-synthetic data.} For Adult (a fixed stratified subsample of 2{,}000 rows), Pima, Breast Cancer and Banknote, the labels of a random fraction $q\in\{0,0.25,0.5,0.75,0.9,1\}$ of rows are shuffled among themselves (10 replicates per $q$). This keeps the feature distribution and class balance while signal falls monotonically with $q$; $q=1$ is an exact null. Because $X$ is fixed within a base dataset, one permutation null per probe (and base dataset) serves all of its replicates.
+
+\subsection{Experiments}
+
+\begin{itemize}
+\item \textbf{A (calibration).} A1: dataset-specific permutation tests on null data, $n\in\{200,1000\}$, positive rate $\in\{0.5,0.1\}$, 25 features, 60 replicates, $B=100$ (M3/M4: $n=200$, 30 replicates, $B=40$). A2: uncorrected versus Simes aggregation for S1/S2 with $p\in\{10,50,200\}$ features, $n\in\{200,1000\}$, 300 replicates.
+\item \textbf{B (power).} 3 signal types $\times$ 4 strengths $\times$ $n\in\{200,1000,5000\}$, 20 irrelevant features, balanced; 25 replicates (15 at $n=5000$); Monte Carlo null from 120 reference datasets (80 at $n=5000$) with 80 (60) hold-out null datasets.
+\item \textbf{C (robustness).} $n=1000$, Bayes AUC 0.70, irrelevant features $\in\{0,20,200\}$ $\times$ positive rate $\in\{0.5,0.1\}$; 25 replicates, 80 reference nulls per setting.
+\item \textbf{D (leakage and runtime).} Sanity check on constructed and real leaks; probes on cases the check misses; runtime on Adult subsamples of 1{,}000--48{,}842 rows.
+\item \textbf{Case studies.} The full protocol on Adult, NSW and the incentive experiment.
+\end{itemize}
+
+\subsection{Implementation and Deviations from the Proposal}
+
+All code is in eight documented Jupyter notebooks (Python~3.13, scikit-learn~1.9~\cite{pedregosa2011}, \texttt{problexity}~\cite{komorniczak2022}). Experiments ran on two CPU cores without a GPU and with network access restricted to GitHub, which forced three deviations from the research proposal, all made before results were seen. (1) TabPFN~\cite{hollmann2025} could not be installed, because its weights are distributed through a blocked host; a random forest (M3) takes its place as the flexible learner. (2) LightGBM could not be installed; scikit-learn's histogram gradient boosting, which implements the same algorithm family, is the reference probe (M4). (3) Replicate numbers and sample sizes were reduced ($n\le5000$ in the power experiments), and quadratic-cost probes run on at most 5{,}000 rows and model-based permutation tests on at most 10{,}000 rows. The study therefore does not measure power for $n>5000$.

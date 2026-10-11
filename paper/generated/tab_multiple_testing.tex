@@ -1,0 +1,25 @@
+\begin{table}[!t]
+\centering
+\caption{Experiment A2: false-positive rate of per-feature tests with and without multiple-testing correction (300 null datasets per row).}
+\label{tab:multiple}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lccccc}
+\hline
+Probe & $n$ & $p$ & Uncorrected & Simes/BH & $1-0.95^p$ \\ \hline
+S1 MI & 200 & 10 & 0.413 & 0.033 & 0.401 \\
+S1 MI & 200 & 50 & 0.903 & 0.047 & 0.923 \\
+S1 MI & 200 & 200 & 1.000 & 0.090 & 1.000 \\
+S1 MI & 1000 & 10 & 0.357 & 0.017 & 0.401 \\
+S1 MI & 1000 & 50 & 0.947 & 0.030 & 0.923 \\
+S1 MI & 1000 & 200 & 1.000 & 0.027 & 1.000 \\
+S2 ANOVA/$\chi^2$ & 200 & 10 & 0.410 & 0.033 & 0.401 \\
+S2 ANOVA/$\chi^2$ & 200 & 50 & 0.943 & 0.037 & 0.923 \\
+S2 ANOVA/$\chi^2$ & 200 & 200 & 1.000 & 0.063 & 1.000 \\
+S2 ANOVA/$\chi^2$ & 1000 & 10 & 0.403 & 0.060 & 0.401 \\
+S2 ANOVA/$\chi^2$ & 1000 & 50 & 0.903 & 0.073 & 0.923 \\
+S2 ANOVA/$\chi^2$ & 1000 & 200 & 1.000 & 0.050 & 1.000 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}

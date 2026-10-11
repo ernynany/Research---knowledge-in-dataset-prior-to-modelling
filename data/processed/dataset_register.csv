@@ -1,0 +1,10 @@
+dataset,rows,features,categorical_features,positive_rate,file
+adult,48842,14,0,0.2393,adult.csv
+nsw_null,445,8,0,0.4157,nsw_null.csv
+nsw_leak,445,9,0,0.4157,nsw_leak.csv
+thornton_null,2901,3,0,0.7659,thornton_null.csv
+thornton_village,2901,4,0,0.7659,thornton_village.csv
+thornton_leak,2901,4,0,0.7659,thornton_leak.csv
+pima,768,8,0,0.349,pima.csv
+banknote,1372,4,0,0.4446,banknote.csv
+breast_cancer,569,30,0,0.6274,breast_cancer.csv

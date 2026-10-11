@@ -1,0 +1,14 @@
+,id_like_columns,exact_duplicates,duplicate_rate,max_single_feature_auc,best_single_feature,flagged_features,verdict
+Null synthetic (control),[],0,0.0,0.5427747375832053,x7,[],clean
+Null + identifier column,['row_id'],0,0.0,0.5427747375832053,x7,[],leakage suspected
+Null + crude leak (0.5% flipped copy of y),[],0,0.0,0.9949916794674859,leak,['leak'],leakage suspected
+Null + subtle leak (10% flipped copy of y),[],0,0.0,0.900089605734767,leak,[],clean
+NSW pre-treatment only,[],73,0.16404494382022472,0.5632536382536383,nodegree,[],clean
+NSW + re78 (post-treatment),[],15,0.033707865168539325,0.5696985446985448,re78,[],clean
+Thornton pre-treatment only,[],45,0.015511892450879007,0.5226947952527212,age,[],clean
+Thornton + village,[],45,0.015511892450879007,0.6587489013997128,villnum,[],clean
+Thornton + tinc (incentive amount),[],11,0.003791795932437091,1.0,tinc,['tinc'],leakage suspected
+Adult,[],52,0.001064657466934196,0.7779633136535773,relationship,[],clean
+Pima,[],0,0.0,0.7881305970149254,glucose,[],clean
+Banknote,[],24,0.01749271137026239,0.927332085538488,variance,[],clean
+Breast cancer,[],0,0.0,0.9754505575815232,worst_perimeter,[],clean
